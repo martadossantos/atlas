@@ -10,7 +10,10 @@ export default function Home() {
   const [hoveredSourceIds, setHoveredSourceIds] = useState<string[]>([]);
 
   return (
-    <div className="bg-blue-100 h-screen">
+    <div
+      className="h-screen bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url(/bg.png)" }}
+    >
       <main className="bg-background max-w-6xl m-auto h-full flex flex-col font-sans">
         <nav className="border-b-1 border-white p-4 shrink-0">
           <a href="#" className="font-unbounded font-black text-2xl text-highlight-green">ATLAS</a>
@@ -30,11 +33,29 @@ export default function Home() {
           </div>
 
           {/* Sources etc */}
-          <div className="p-4 col-span-2 overflow-y-auto">
-            <h3>Sources</h3>
-            {activePrompt && (
-              <SourceSidebar sources={activePrompt.sources} hoveredSourceIds={hoveredSourceIds} />
-            )}
+          <div className="col-span-2 overflow-y-auto">
+            <div className="border-b-1 border-white px-4 py-8">
+                <h3 className="font-bold" pb-3>Sources</h3>
+                {activePrompt && (
+                  <SourceSidebar
+                    sources={activePrompt.sources.filter((source) => source.type === "internal")}
+                    hoveredSourceIds={hoveredSourceIds}
+                  />
+                )}
+            </div>
+
+            <div className="px-4 py-8">
+              <h3 className="font-bold pb-3">External Links</h3>
+              {activePrompt && (() => {
+                const externalSources = activePrompt.sources.filter((source) => source.type === "external");
+                return externalSources.length > 0 ? (
+                  <SourceSidebar sources={externalSources} hoveredSourceIds={hoveredSourceIds} />
+                ) : (
+                  <p className="text-sm text-white/40">This chat is not using external sources.</p>
+                );
+              })()}
+            </div>
+
           </div>
 
         </div>

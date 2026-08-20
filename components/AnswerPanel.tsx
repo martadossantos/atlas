@@ -31,7 +31,7 @@ export function AnswerPanel({ prompt, hoveredSourceId, onHoverSegment }: Props) 
               onMouseEnter={() => onHoverSegment(segment.citedSourceIds)}
               onMouseLeave={() => onHoverSegment([])}
               className={`rounded px-1 -mx-1 transition-colors ${
-                isHovered ? "underline underline-offset-3 decoration-lime-400/60" : ""
+                isHovered ? "underline underline-offset-3 decoration-source-highlight/60" : ""
               }`}
             >
               {segment.text}

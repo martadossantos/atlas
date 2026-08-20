@@ -9,7 +9,7 @@ type Props = {
 
 export function ChatInput({ value, onChange, onSubmit, disabled, onFocus, onBlur }: Props) {
   return (
-    <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-black/40 p-4">
+    <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-black/40 p-4 px-8">
       <input
         value={value}
         onChange={(e) => onChange(e.target.value)}

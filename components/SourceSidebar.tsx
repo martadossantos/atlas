@@ -18,7 +18,7 @@ export function SourceSidebar({ sources, hoveredSourceIds }: Props) {
             key={source.id}
             type="button"
             className={`group w-full rounded-lg border border-white/10 px-4 py-3 text-sm flex flex-col gap-2 text-left transition-colors hover:border-white/20 hover:bg-white/5 ${
-              isHighlighted ? "bg-lime-400/10 border-lime-400/30" : ""
+              isHighlighted ? "bg-source-highlight/10 border-source-highlight/30" : ""
             }`}
           >
             <div className="flex items-center justify-between gap-2">

@@ -165,7 +165,7 @@ export const demoPrompts: DemoPrompt[] = [
       {
         id: "aviation-herald-article",
         filename: "The Aviation Herald",
-        location: "\"...small paragraph with a quote...\"",
+        location: "Incident report",
         lastEdited: "6 April 2026",
         type: "external",
       },
