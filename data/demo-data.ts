@@ -20,7 +20,6 @@ export const demoPrompts: DemoPrompt[] = [
       {
         text: "The finding was rated 'monitor, not yet actionable' at the time.",
         citedSourceIds: ["engine-health-report"],
-        underline: true,
       },
       {
         text: "Maintenance history: No major overhaul or engine swap has occurred on this tail in the last 18 months, ruling out a hardware change as the cause. The last scheduled engine wash was carried out in January, which is slightly overdue against the 90-day interval.",
@@ -91,7 +90,6 @@ export const demoPrompts: DemoPrompt[] = [
       {
         text: "The MEL history file that would normally cover open deferrals for this tail hasn't been re-indexed since a system migration, so I don't have reliable visibility into current MEL status.",
         citedSourceIds: ["mel-index-stale"],
-        underline: true,
       },
       {
         text: "Rather than infer a trend from one data point, I'd recommend pulling the APU removal history directly from the CAMO system and checking current MEL status manually before drawing any conclusion.",
@@ -142,7 +140,6 @@ export const demoPrompts: DemoPrompt[] = [
       {
         text: "External coverage of the directive notes it followed an in-service fan blade fracture event, which is consistent with the inspection scope described in the AD text itself.",
         citedSourceIds: ["aviation-herald-article"],
-        underline: true,
       },
       {
         text: "Recommend prioritising G-EZFP's inspection given the approaching cycle limit, and flagging it to CAMO for scheduling this week.",

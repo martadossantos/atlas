@@ -9,10 +9,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-nunito-sans);
   --font-mono: var(--font-geist-mono);
   --font-unbounded: var(--font-unbounded);
-  --font-nunito-sans: var(--font-nunito-sans);
+  --color-highlight-green: #D4FBD5;
+  --color-primary-text: #E6E5EE;
+  --color-dark-text: #151213;
+  --color-conflict-red: #D8215B;
 }
 
 body {

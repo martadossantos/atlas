@@ -11,7 +11,6 @@ export type Source = {
 export type AnswerSegment = {
   text: string;
   citedSourceIds: string[]; // powers hover-highlight; [] = no citation for this segment
-  underline?: boolean; // visually flag a source
 };
  
 export type DemoPrompt = {
