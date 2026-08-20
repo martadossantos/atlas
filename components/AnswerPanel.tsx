@@ -30,7 +30,8 @@ export function AnswerPanel({ prompt, hoveredSourceId, onHoverSegment }: Props) 
               key={i}
               onMouseEnter={() => onHoverSegment(segment.citedSourceIds)}
               onMouseLeave={() => onHoverSegment([])}
-              className={`rounded px-1 -mx-1 transition-colors ${
+              style={{ animationDelay: `${i * 120}ms` }}
+              className={`animate-fade-in-up rounded px-1 -mx-1 transition-colors ${
                 isHovered ? "underline underline-offset-3 decoration-source-highlight/60" : ""
               }`}
             >

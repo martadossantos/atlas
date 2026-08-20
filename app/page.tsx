@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { DemoExplorer } from "@/components/DemoExplorer";
+import { IntroOverlay } from "@/components/IntroOverlay";
 import { SourceSidebar } from "@/components/SourceSidebar";
 import type { DemoPrompt } from "@/data/types";
 
@@ -11,10 +12,12 @@ export default function Home() {
 
   return (
     <div
-      className="h-screen bg-cover bg-center bg-no-repeat"
+      className="min-h-screen bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url(/bg.png)" }}
     >
-      <main className="bg-background max-w-6xl m-auto h-full flex flex-col font-sans">
+      <IntroOverlay />
+
+      <main className="bg-background max-w-7xl m-auto min-h-screen flex flex-col font-sans">
         <nav className="border-b-1 border-white p-4 shrink-0">
           <a href="#" className="font-unbounded font-black text-2xl text-highlight-green">ATLAS</a>
         </nav>
@@ -35,7 +38,7 @@ export default function Home() {
           {/* Sources etc */}
           <div className="col-span-2 overflow-y-auto">
             <div className="border-b-1 border-white px-4 py-8">
-                <h3 className="font-bold" pb-3>Sources</h3>
+                <h3 className="font-bold pb-3">Sources</h3>
                 {activePrompt && (
                   <SourceSidebar
                     sources={activePrompt.sources.filter((source) => source.type === "internal")}
